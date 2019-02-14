@@ -7,12 +7,13 @@
   </div>
   <div class="pages">
     <ul>
-      <li *ngFor="let page of pages" #{{page}} class={{page}} (click)=(getConsole(page))>
+      <li *ngFor="let page of pages" [ngClass]="{page: true, active: activeElement === page}" (click)=(setActive(page))>
         {{page}}
       </li>
     </ul>
   </div>
 </div>
 <div class="page-content">
-  <app-races *ngIf="activeElement == 'Races'"></app-races>
+  <app-races *ngIf="activeElement === 'Races'"></app-races>
+  <app-home *ngIf="activeElement === 'Home'"></app-home>
 </div>

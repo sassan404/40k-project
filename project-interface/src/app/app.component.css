@@ -39,9 +39,12 @@ li {
     line-height: 2.5;
     color : white;
 }
-li:hover {
+li:hover{
     background-color: rgb(27, 77, 77);
     color: black;
+}
+li.active {
+    background-color: rgb(35, 95, 95)
 }
 .page-content {
     height: 55vh;

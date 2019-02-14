@@ -9,7 +9,7 @@ export class AppComponent {
   activeElement: any;
   pages = ['Home', 'Timeline', 'Races', 'Characters', 'Locations', 'Contact Us'];
   title = 'project-interface';
-  getConsole = function(page) {
+  setActive = function(page) {
     this.activeElement = page;
   };
 
