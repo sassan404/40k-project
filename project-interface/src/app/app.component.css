@@ -1,0 +1,46 @@
+.header {
+    top: 0;
+    height: 40vh;
+    width: 100%;
+    /* display: block; */
+    position: fixed;
+}
+.header-image {
+    height: 85%;
+    width: 100%;
+    bottom: 0;
+}
+.header-image > h1 {
+    position: absolute;
+}
+img {
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+ul {
+    position: absolute;
+    list-style: none;
+    display: -webkit-box;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pages {    
+    height: 15%;
+    background-color: rgb(40, 43, 43);
+    display: -webkit-box;
+    position: relative;
+}
+li {
+    
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 2.5;
+    color : white;
+}
+li:hover {
+    background-color: rgb(27, 77, 77);
+    color: black;
+}

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  pages = ['Home', 'Timeline', 'Races', 'Characters', 'Locations', 'Contact Us'];
   title = 'project-interface';
 }
