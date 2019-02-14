@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  activeElement: any;
   pages = ['Home', 'Timeline', 'Races', 'Characters', 'Locations', 'Contact Us'];
   title = 'project-interface';
+  getConsole = function(page) {
+    this.activeElement = page;
+  };
+
 }
