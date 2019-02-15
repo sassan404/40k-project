@@ -1,0 +1,13 @@
+.list {
+    height: 85%;
+    overflow: auto;
+}
+.list>ul>li {
+    margin: 5px;
+    list-style: none;
+    border: 2px solid gray;
+    background: tan;
+}
+h1 {
+    font-size: 15px;
+}

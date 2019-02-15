@@ -7,7 +7,8 @@
   </div>
   <div class="pages">
     <ul>
-      <li *ngFor="let page of pages" [ngClass]="{page: true, active: activeElement === page}" (click)=(setActive(page))>
+      <li *ngFor="let page of pages" [ngClass]="{page: true, active: activeElement === page}" 
+      (click)=(setActive(page))>
         {{page}}
       </li>
     </ul>
@@ -15,5 +16,7 @@
 </div>
 <div class="page-content">
   <app-races *ngIf="activeElement === 'Races'"></app-races>
-  <app-home *ngIf="activeElement === 'Home'"></app-home>
+  <app-home *ngIf="!activeElement || activeElement === 'Home'"></app-home>
+  <app-locations *ngIf="activeElement === 'Locations'"></app-locations>
+  <app-contact *ngIf="activeElement === 'Contact Us'"></app-contact>
 </div>
