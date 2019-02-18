@@ -31,12 +31,15 @@ ul {
     background-color: rgb(40, 43, 43);
     display: -webkit-box;
     position: relative;
+    width: 100%;
+    overflow: auto;
 }
 li {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: fit-content;
     line-height: 2.5;
     color : white;
 }

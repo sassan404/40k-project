@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RacesComponent } from './Races/races.component';
 import { HomeComponent } from './Home/home.component';
 import { ContactComponent } from './ContactUs/contact.component';
+import { CharactersComponent } from './Characters/character.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ContactComponent } from './ContactUs/contact.component';
     RacesComponent,
     HomeComponent,
     LocationComponent,
-    ContactComponent
+    ContactComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule

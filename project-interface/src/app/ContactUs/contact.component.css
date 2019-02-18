@@ -1,12 +1,13 @@
 textarea {
     margin-left: 15px;
-    height: 25px;
+    height: 26px;
     width: 300px;
     top: 10px;
     position: absolute;
     left: 50px;
     line-height: 2;
     font-family: 'Times New Roman', Times, serif;
+    resize: none;
 }
 .group {
     display: flex;
