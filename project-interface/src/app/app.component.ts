@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  activeElement: any;
+  activeElement: string;
   pages = ['Home', 'Timeline', 'Races', 'Characters', 'Locations', 'Contact Us'];
-  title = 'project-interface';
-  setActive = function(page) {
+  setActive = function( page: string) {
     this.activeElement = page;
   };
-
 }

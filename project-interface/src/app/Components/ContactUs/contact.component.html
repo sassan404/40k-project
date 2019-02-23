@@ -1,0 +1,7 @@
+<p>Hello! this is a trial Website, for more info, please, contact us in the feild below</p>
+<div (input)=(checkActivity(name,email,subject))>
+    <input #name type="text" placeholder="Name" class="input">
+    <input #email type="text" placeholder="Email" class="input">
+    <textarea #subject rows="8" placeholder="Subject" class="subject input"></textarea>
+    <input type="button" [disabled]="!active" value="Submit" (click)=(submitAll())>
+</div>

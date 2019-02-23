@@ -42,6 +42,7 @@ li {
     width: fit-content;
     line-height: 2.5;
     color : white;
+    transition:0.5s all;
 }
 li:hover{
     background-color: rgb(27, 77, 77);
