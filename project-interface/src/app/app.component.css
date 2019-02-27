@@ -53,5 +53,6 @@ li.active {
 }
 .page-content {
     height: 55vh;
-    overflow: auto;
+    width: 100%;
+    /* overflow: auto; */
 }

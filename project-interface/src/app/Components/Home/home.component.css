@@ -1,13 +1,17 @@
 .list {
-    height: 85%;
+    height: 95%;
     overflow: auto;
 }
-.list>ul>li {
-    margin: 5px;
-    list-style: none;
-    border: 2px solid gray;
-    background: tan;
+app-news {
+    margin-bottom: 5px;
+    display: -webkit-box;
+    width: 100%;    
+    line-height: 2;
+    margin-right: 0;
+    margin-bottom: 5px;
+    border-radius: 100px;
 }
 h1 {
     font-size: 15px;
+
 }

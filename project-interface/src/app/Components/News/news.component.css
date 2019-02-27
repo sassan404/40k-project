@@ -1,0 +1,24 @@
+.date {
+    width: 120px;
+    text-align: center;
+    border-radius: 100px;
+    color: darkmagenta;
+    height: fit-content;
+    margin-right: 5px;
+}
+
+.source {
+    width: 120px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: darkgrey;
+    height: fit-content;
+    text-transform: capitalize;
+    color: white;
+}
+
+.news {
+    width: 68%;
+    margin-left: 10px;
+    color: grey
+}

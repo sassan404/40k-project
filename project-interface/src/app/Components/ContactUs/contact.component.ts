@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { EventManagerPlugin } from '@angular/platform-browser/src/dom/events/event_manager';
 import { Subject } from 'rxjs';
 
@@ -8,16 +8,15 @@ import { Subject } from 'rxjs';
     styleUrls: ['contact.component.css']
 })
 
-export class ContactComponent {
+export class ContactComponent implements OnInit, OnDestroy {
     active: boolean;
-    // active = name.value && email.value && subject.value;
-    submitAll = function() {
-        for (const element of (<any>event).path[1].getElementsByClassName('input')) {
-            element.value = '';
-        }
+    submitAll = function(name: HTMLInputElement, email: HTMLInputElement, subject: HTMLInputElement) {
+        name.value = email.value = subject.value = '';
         this.active = false;
     };
-    checkActivity = function(name: HTMLInputElement, email: HTMLInputElement, subject: HTMLInputElement) {
-        this.active = name.value && email.value && subject.value;
+    checkActivity = function(name: string, email: string, subject: string) {
+        this.active = name && email && subject;
     };
+    ngOnInit() { console.log('init'); }
+    ngOnDestroy() { console.log('dest'); }
 }

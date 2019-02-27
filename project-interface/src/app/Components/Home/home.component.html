@@ -1,6 +1,4 @@
 <h1> Random FunFacts about Warhammer 40k, beware some facts are corrupted by Tzeentch</h1>
 <div class="list">
-    <ul>
-        <li *ngFor="let news of newsList">{{news}}</li>
-    </ul>
+    <app-news *ngFor="let news of newsList" [news]="news"></app-news>
 </div>
