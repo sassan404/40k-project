@@ -10,6 +10,8 @@ app-news {
     margin-right: 0;
     margin-bottom: 5px;
     border-radius: 100px;
+    border-top: 1px dashed black;
+    padding-top: 8px;
 }
 h1 {
     font-size: 15px;

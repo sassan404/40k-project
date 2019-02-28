@@ -1,0 +1,20 @@
+<div class="header">
+        <div class="header-image">
+          <img width="300" alt="Angular Logo" (click)='showFactionPopup()' src="../assets/images/headerImage.jpg">
+        </div>
+        <div class="pages">
+          <ul>
+            <li *ngFor="let page of pages" [ngClass]="{page: true, active: activeElement === page}"
+            (click)=(setActive(page))>
+              {{page}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div [ngSwitch]="activeElement" class="page-content">
+        <app-races *ngSwitchCase="'Races'"></app-races>
+        <app-home *ngSwitchDefault></app-home>
+        <app-locations *ngSwitchCase="'Locations'"></app-locations>
+        <app-contact *ngSwitchCase="'Contact Us'"></app-contact>
+        <app-characters *ngSwitchCase="'Characters'"></app-characters>
+      </div>

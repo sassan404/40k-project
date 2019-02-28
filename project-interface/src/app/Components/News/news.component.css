@@ -11,14 +11,14 @@
     width: 120px;
     text-align: center;
     border-radius: 50px;
-    background-color: darkgrey;
+    background-color:rgb(150, 150, 150);
     height: fit-content;
     text-transform: capitalize;
-    color: white;
+    color: black;
 }
 
 .news {
     width: 68%;
     margin-left: 10px;
-    color: grey
+    color: black;
 }

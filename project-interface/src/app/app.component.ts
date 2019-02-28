@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  activeElement: string;
-  pages = ['Home', 'Timeline', 'Races', 'Characters', 'Locations', 'Contact Us'];
-  setActive = function( page: string) {
-    this.activeElement = page;
+  showWelcome = true;
+  showMain = false;
+  onHide = function(show) {
+    this.showWelcome = !show;
+    this.showMain = true;
   };
 }

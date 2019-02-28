@@ -1,0 +1,20 @@
+<div class="background"></div>
+<div class="faction-popup">
+        <div class="image">
+          <img src="../assets/images/headerImage.jpg">
+        </div>
+        <div>
+          <div class="welcome-text">
+            <p>Beyond is 41st century, where there is nothing but war</p>
+          </div>
+          <div class="choice-text">
+            <p>Pick a faction</p>
+          </div>
+            <div class="selection">
+            <select>
+              <option *ngFor="let faction of factions">{{faction}}</option>
+            </select>
+            <input type="submit" (click)='submitFaction()'>
+            </div>
+        </div>
+      </div>
