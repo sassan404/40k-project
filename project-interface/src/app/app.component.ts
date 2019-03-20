@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showWelcome = true;
   showMain = false;
-  onHide = function(show) {
+  onHide = function(show:  boolean) {
     this.showWelcome = !show;
     this.showMain = true;
   };
+  ngOnInit() {
+    // AOS.init();
+  }
 }
