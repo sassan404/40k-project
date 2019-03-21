@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 import * as AOS from 'aos';
 
 @Component({
@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
     this.showMain = true;
   };
   ngOnInit() {
-    // AOS.init();
+    AOS.init({duration: 500});
   }
 }
