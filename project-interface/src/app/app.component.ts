@@ -9,9 +9,13 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   showWelcome = true;
   showMain = false;
+  faction = null;
   onHide = function(show:  boolean) {
     this.showWelcome = !show;
     this.showMain = true;
+  };
+  changeFaction = function(faction: any) {
+    this.faction = faction;
   };
   ngOnInit() {
     AOS.init({duration: 500});

@@ -11,10 +11,10 @@
             <p>Pick a faction</p>
           </div>
             <div class="selection">
-            <select>
-              <option *ngFor="let faction of factions">{{faction}}</option>
-            </select>
-            <input type="submit" (click)='submitFaction()'>
+              <select [formControl]='selectedFaction' (change)='onChangeFaction()' >
+                <option *ngFor="let faction of factions" [ngValue]="faction">{{faction}}</option>
+              </select>
+              <button (click)='submit()'type="submit">submit</button>
             </div>
         </div>
       </div>

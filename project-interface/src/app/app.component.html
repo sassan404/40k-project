@@ -1,2 +1,3 @@
 <app-main *ngIf="!showWelcome || showMain" [show]='!showWelcom' (hide)=onHide(showWelcome)></app-main>
-<app-welcome *ngIf="showWelcome" [show]='showWelcome' (hide)=onHide(showWelcome)></app-welcome>
+<app-welcome *ngIf="showWelcome" [show]='showWelcome' [faction]='faction' 
+(hide)="onHide($event)" (changeFaction)="changeFaction($event)"></app-welcome>
