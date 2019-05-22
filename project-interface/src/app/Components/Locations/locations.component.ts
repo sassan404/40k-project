@@ -1,25 +1,21 @@
 import { Location } from '../../Classes/location';
 import { Component, OnInit } from '@angular/core';
+import { LocationsService } from 'src/app/services/Locations/locations.service';
 
 @Component({
     selector: 'app-locations',
     templateUrl: 'locations.component.html',
-    styleUrls: ['locations.Component.css']
+    styleUrls: ['locations.Component.css'],
+    providers: [LocationsService]
 })
 
 export class LocationComponent implements OnInit {
     locations: Location[];
+    constructor (private locationService: LocationsService) { }
+    getLocations() {
+        this.locations = this.locationService.getLocations();
+    }
     ngOnInit() {
-        this.locations = [
-            new Location ('Cadia'),
-            new Location ('Armageddon'),
-            new Location ('Aurelia'),
-            new Location ('Calderis'),
-            new Location ('Cyrene'),
-            new Location ('Kaurava System'),
-            new Location ('Kronus'),
-            new Location ('Meridian'),
-            new Location ('Prospero')
-        ];
+        this.getLocations();
     }
 }

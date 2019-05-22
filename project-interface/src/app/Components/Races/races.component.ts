@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Race } from '../../Classes/race';
+import { RacesService } from 'src/app/services/Races/races.service';
 
 @Component({
     selector: 'app-races',
     templateUrl: './races.component.html',
-    styleUrls: ['./races.component.css']
+    styleUrls: ['./races.component.css'],
+    providers: [RacesService]
 })
-export class RacesComponent {
-    Races = [
-        new Race ( 'Humans'),
-        new Race ('Eldar'),
-        new Race ('Necrons'),
-        new Race ('Tyranids'),
-        new Race ('orks'),
-        new Race ('TAU')
-    ];
+export class RacesComponent implements OnInit {
+    races: Race[];
+    constructor (private raceService: RacesService) { }
+    getRaces(): void {
+        this.races = this.raceService.getRaces();
+      }
+    ngOnInit () {
+        this.getRaces();
+    }
 }

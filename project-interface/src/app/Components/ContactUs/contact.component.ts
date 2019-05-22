@@ -17,6 +17,10 @@ export class ContactComponent implements OnInit, OnDestroy {
     checkActivity = function(name: string, email: string, subject: string) {
         this.active = name && email && subject;
     };
-    ngOnInit() { console.log('init'); }
-    ngOnDestroy() { console.log('dest'); }
+    ngOnInit() {
+
+    }
+    ngOnDestroy() {
+
+    }
 }
