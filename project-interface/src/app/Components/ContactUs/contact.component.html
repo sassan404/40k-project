@@ -1,7 +1,17 @@
 <p>Hello! this is a trial Website, for more info, please, contact us in the feild below</p>
-<div (input)=(checkActivity(name.value,email.value,subject.value))>
-    <input #name type="text" placeholder="Name" class="input">
-    <input #email type="text" placeholder="Email" class="input">
-    <textarea #subject rows="8" placeholder="Subject" class="subject input"></textarea>
-    <input type="button" [disabled]="!active" value="Submit" (click)=(submitAll(name,email,subject))>
-</div>
+<form [formGroup]='contactForm' (ngSubmit)="submitAll()" (input)=(checkActivity())>
+    <label>
+        Name:
+        <input formControlName="Name" type="text" class="input">
+    </label>
+    <label>
+        Email:
+        <input formControlName="Email" type="text" class="input">
+    </label>
+    <label>
+        Subject:
+        <textarea formControlName="Subject" rows="8" class="subject input"></textarea>
+    </label>
+    <input type="submit" [disabled]="!active" value="Submit" class="button">
+
+</form>

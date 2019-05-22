@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { EventManagerPlugin } from '@angular/platform-browser/src/dom/events/event_manager';
 import { Subject } from 'rxjs';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-contact',
@@ -10,17 +11,25 @@ import { Subject } from 'rxjs';
 
 export class ContactComponent implements OnInit, OnDestroy {
     active: boolean;
-    submitAll = function(name: HTMLInputElement, email: HTMLInputElement, subject: HTMLInputElement) {
-        name.value = email.value = subject.value = '';
-        this.active = false;
+    contactForm: FormGroup = new FormGroup({
+        Name: new FormControl(),
+        Email: new FormControl(),
+        Subject: new FormControl(),
+    });
+    submitAll = function() {
+        console.log(this.contactForm.value);
+        this.contactForm.patchValue({
+            Name: '',
+            Email: '',
+            Subject: ''
+        });
+        this.checkActivity();
     };
-    checkActivity = function(name: string, email: string, subject: string) {
-        this.active = name && email && subject;
+    checkActivity = function() {
+        this.active = this.contactForm.value.Name && this.contactForm.value.Email && this.contactForm.value.Subject;
     };
     ngOnInit() {
-
     }
     ngOnDestroy() {
-
     }
 }
